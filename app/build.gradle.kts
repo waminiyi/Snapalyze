@@ -87,6 +87,9 @@ dependencies {
     implementation (libs.barcode.scanning)
     implementation (libs.text.recognition)
 
+    implementation (libs.accompanist.permissions)
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
