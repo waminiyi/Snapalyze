@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Snapalyze</string>
+
+
+    <string name="barcode_detection_title">Barcode scanning</string>
+    <string name="barcode_detection_description">Scan and process barcodes. Supports most standard 1D and 2D formats.</string>
+    <string name="barcode_detection_url">https://developers.google.com/static/ml-kit/vision/barcode-scanning/images/barcode_scanning2x.png</string>
+
+    <string name="text_recognition_title">Text recognition</string>
+    <string name="text_recognition_description">Recognize and extract text from images.</string>
+    <string name="text_recognition_url">https://developers.google.com/static/ml-kit/vision/text-recognition/images/text_recognition2x.png</string>
+
+    <string name="image_labeling_detection_title">Image labeling</string>
+    <string name="image_labeling_detection_description">Identify objects, locations, animal species, products, and more."</string>
+    <string name="image_labeling_detection_url">https://developers.google.com/static/ml-kit/vision/image-labeling/images/image_labeling2x.png</string>
+
 </resources>
