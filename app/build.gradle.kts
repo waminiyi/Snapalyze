@@ -59,6 +59,34 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    // CameraX
+    implementation (libs.androidx.camera.camera2)
+    implementation (libs.androidx.camera.lifecycle)
+    implementation (libs.androidx.camera.view)
+
+    // Navigation
+    implementation(libs.voyager.navigator)
+    implementation(libs.voyager.core)
+    implementation(libs.voyager.tab.navigator)
+    implementation(libs.voyager.screenmodel)
+    implementation(libs.voyager.koin)
+
+    //Coil for images loading
+    implementation(libs.coil)
+    implementation(libs.coil.kt.coil.compose)
+
+    //Dependency injection
+    implementation(platform(libs.koin.bom))
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
+    implementation(libs.koin.compose)
+
+    // MLKit
+    implementation (libs.image.labeling)
+    implementation (libs.barcode.scanning)
+    implementation (libs.text.recognition)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
