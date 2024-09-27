@@ -2,9 +2,7 @@ package com.snapalyze.app.presentation.screens.barcode_scanning
 
 
 import android.Manifest
-import android.graphics.PointF
 import android.widget.Toast
-import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -36,7 +34,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.toComposeRect
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.stringResource
@@ -52,9 +49,6 @@ import com.google.mlkit.vision.barcode.common.Barcode
 import com.snapalyze.app.R
 import com.snapalyze.app.analyzer.BarcodeScanningAnalyzer
 import com.snapalyze.app.presentation.common.components.CameraView
-import com.snapalyze.app.presentation.common.utils.adjustPoint
-import com.snapalyze.app.presentation.common.utils.adjustSize
-import com.snapalyze.app.presentation.common.utils.drawBounds
 
 object BarcodeScanningScreen : Screen {
 
@@ -125,9 +119,6 @@ fun ScanSurface(navigator: Navigator) {
     val lifecycleOwner = LocalLifecycleOwner.current
     val detectedBarcode = remember { mutableStateListOf<Barcode>() }
 
-    val screenWidth = remember { mutableStateOf(context.resources.displayMetrics.widthPixels) }
-    val screenHeight = remember { mutableStateOf(context.resources.displayMetrics.heightPixels) }
-
     val imageWidth = remember { mutableStateOf(0) }
     val imageHeight = remember { mutableStateOf(0) }
 
@@ -186,37 +177,6 @@ fun ScanSurface(navigator: Navigator) {
                 )
             }
         }
-        DrawBarcode(
-            barcodes = detectedBarcode,
-            imageWidth = imageWidth.value,
-            imageHeight = imageHeight.value,
-            screenWidth = screenWidth.value,
-            screenHeight = screenHeight.value
-        )
     }
 }
 
-@Composable
-fun DrawBarcode(
-    barcodes: List<Barcode>,
-    imageWidth: Int,
-    imageHeight: Int,
-    screenWidth: Int,
-    screenHeight: Int
-) {
-    Canvas(modifier = Modifier.fillMaxSize()) {
-        barcodes.forEach { barcode ->
-            barcode.boundingBox?.toComposeRect()?.let {
-                val topLeft = adjustPoint(
-                    PointF(it.topLeft.x, it.topLeft.y),
-                    imageWidth,
-                    imageHeight,
-                    screenWidth,
-                    screenHeight
-                )
-                val size = adjustSize(it.size, imageWidth, imageHeight, screenWidth, screenHeight)
-                drawBounds(topLeft, size, Color.Yellow, 10f)
-            }
-        }
-    }
-}
