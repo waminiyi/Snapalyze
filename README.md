@@ -10,19 +10,14 @@ Snapalyze is a simple Android app that demonstrates various use cases of **Googl
 
 ## Screenshots
 
-### Home Screen
-![Home Screen](screenshots/home_screen.jpg)
+<p> 
+  <img src="screenshots/home_screen.jpg" alt="Home screen" width="200" height="350"/>
+  <img src="screenshots/image_labeling.jpg" alt="Image Labeling" width="200" height="350"/>
+  <img src="screenshots/product_bar_code.jpg" alt="Barcode Scanning" width="200" height="350"/>
+  <img src="screenshots/double_qr_code.jpg" alt="Barcode Scanning" width="200" height="350"/>
+  <img src="screenshots/text_recognition.jpg" alt="Text Recognition" width="200" height="350"/>
+</p>
 
-### Image Labeling
-![Image Labeling](screenshots/image_labeling.jpg)
-
-### Barcode Scanning
-![Barcode Scanning](screenshots/product_bar_code.jpg)
-![Barcode Scanning](screenshots/double_qr_code.jpg)
-
-
-### Text Recognition
-![Text Recognition](screenshots/text_recognition.jpg)
 
 ## Tech Stack
 
