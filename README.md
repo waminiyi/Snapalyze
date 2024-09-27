@@ -11,11 +11,11 @@ Snapalyze is a simple Android app that demonstrates various use cases of **Googl
 ## Screenshots
 
 <p> 
-  <img src="screenshots/home_screen.jpg" alt="Home screen" width="200" height="350"/>
-  <img src="screenshots/image_labeling.jpg" alt="Image Labeling" width="200" height="350"/>
-  <img src="screenshots/product_bar_code.jpg" alt="Barcode Scanning" width="200" height="350"/>
-  <img src="screenshots/double_qr_code.jpg" alt="Barcode Scanning" width="200" height="350"/>
-  <img src="screenshots/text_recognition.jpg" alt="Text Recognition" width="200" height="350"/>
+  <img src="screenshots/home_screen.jpg" alt="Home screen" width="200" height="400"/>
+  <img src="screenshots/image_labeling.jpg" alt="Image Labeling" width="200" height="400"/>
+  <img src="screenshots/product_bar_code.jpg" alt="Barcode Scanning" width="200" height="400"/>
+  <img src="screenshots/double_qr_code.jpg" alt="Barcode Scanning" width="200" height="400"/>
+  <img src="screenshots/text_recognition.jpg" alt="Text Recognition" width="200" height="400"/>
 </p>
 
 
